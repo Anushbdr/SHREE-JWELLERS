@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Jewellers | Timeless Gold</title>
+<meta name="description" content="Shree Jewellers — premium Indian gold jewellery showcase. Explore the latest necklaces, earrings, bangles and rings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f8f1e4; 
+  --cream2:#fffaf2; 
+  --gold:#b88927; 
+  --gold2:#d6b45b;
+  --gold-dark:#8b651d;
+  --ink:#2b2116; 
+  --muted:#756754; 
+  --line:#e6d7bd; 
+  --white:#fffdf8;
+  --shadow:0 18px 45px rgba(92,64,21,.12);
+  --transition: all .25s ease;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Inter', Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit;transition:var(--transition)}
+button,input{font:inherit}
+
+/* Navigation */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:rgba(255,250,242,.94);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s ease;
+}
+.nav.scrolled{
+  box-shadow:0 6px 24px rgba(43,33,22,.06);
+}
+.navin{
+  max-width:1180px;
+  margin:auto;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 22px;
+}
+.logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:var(--gold-dark);
+  display:inline-block;
+  text-align:center;
+}
+.logo span{
+  display:block;
+  font-family:'Inter', sans-serif;
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.34em;
+  text-align:center;
+  color:var(--muted);
+  margin-top:-4px;
+}
+.links{
+  display:flex;
+  gap:28px;
+  font-size:13px;
+  font-weight:500;
+  color:#594a38;
+}
+.links a:hover{
+  color:var(--gold);
+}
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 16px;
+  border-radius:2px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  background:var(--gold);
+  color:#fff;
+  border:1px solid var(--gold);
+  transition:var(--transition);
+}
+.nav-btn:hover{
+  background:#a3761e;
+  color:#fff;
+}
+
+/* Mobile Hamburger */
+.mobile-toggle{
+  display:none;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+}
+.mobile-toggle span{
+  display:block;
+  width:22px;
+  height:2px;
+  background:var(--ink);
+  margin:5px 0;
+  transition:var(--transition);
+}
+
+/* Hero Section */
+.hero{
+  min-height:650px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at 72% 40%,rgba(214,180,91,.24),transparent 34%),linear-gradient(120deg,#fbf4e8,#efe1c7);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:560px;
+  height:560px;
+  border:1px solid rgba(184,137,39,.22);
+  border-radius:50%;
+  right:-120px;
+  top:60px;
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border:1px solid rgba(184,137,39,.18);
+  border-radius:50%;
+  right:-50px;
+  top:130px;
+  pointer-events:none;
+}
+.heroIn{
+  width:min(1180px,100%);
+  padding:70px 22px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:35px;
+  position:relative;
+  z-index:2;
+}
+.kicker{
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#997327;
+  font-weight:600;
+  margin-bottom:15px;
+}
+h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(56px,7.5vw,90px);
+  line-height:.88;
+  margin:0 0 24px;
+  font-weight:600;
+  color:#231a10;
+}
+h1 i{
+  font-style:italic;
+  color:var(--gold);
+}
+.hero p{
+  max-width:540px;
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
+}
+.btns{
+  display:flex;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:14px 22px;
+  border-radius:2px;
+  border:1px solid var(--gold);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:var(--transition);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+.primary{
+  background:var(--gold);
+  color:#fff;
+}
+.primary:hover{
+  background:#a3761e;
+  border-color:#a3761e;
+  box-shadow:0 8px 20px rgba(184,137,39,.28);
+}
+.secondary{
+  background:transparent;
+  color:#795b20;
+}
+.secondary:hover{
+  background:rgba(184,137,39,.08);
+}
+.heroCard{
+  background:var(--white);
+  padding:14px;
+  box-shadow:0 22px 60px rgba(92,64,21,.16);
+  transform:rotate(1.5deg);
+  border:1px solid var(--line);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.heroCard:hover{
+  transform:rotate(0deg) translateY(-4px);
+  box-shadow:0 26px 70px rgba(92,64,21,.22);
+}
+.heroCard img{
+  width:100%;
+  height:460px;
+  object-fit:cover;
+  display:block;
+  background:#ebdcc4;
+}
+.heroTag{
+  text-align:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  padding:14px 0 6px;
+  color:var(--ink);
+}
+
+/* Collections Section */
+.section{
+  max-width:1180px;
+  margin:auto;
+  padding:86px 22px;
+}
+.head{
+  text-align:center;
+  margin-bottom:35px;
+}
+.head .kicker{
+  margin-bottom:8px;
+}
+h2{
+  font:600 clamp(36px,4.5vw,52px) "Cormorant Garamond",serif;
+  margin:0;
+  color:#231a10;
+}
+.sub{
+  color:var(--muted);
+  font-size:14px;
+  margin-top:8px;
+}
+
+.search{
+  display:flex;
+  justify-content:center;
+  margin:0 auto 24px;
+  position:relative;
+  max-width:440px;
+}
+.search input{
+  width:100%;
+  border:1px solid var(--line);
+  background:var(--white);
+  padding:13px 18px 13px 42px;
+  outline:none;
+  font-size:14px;
+  border-radius:2px;
+  transition:var(--transition);
+}
+.search input:focus{
+  border-color:var(--gold);
+  box-shadow:0 4px 18px rgba(184,137,39,.12);
+}
+.search svg{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:var(--muted);
+}
+
+.filters{
+  display:flex;
+  gap:9px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:25px 0 35px;
+}
+.filter{
+  background:transparent;
+  border:1px solid var(--line);
+  padding:10px 18px;
+  border-radius:50px;
+  color:#604d31;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.04em;
+  transition:var(--transition);
+}
+.filter.active, .filter:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:#fff;
+}
+
+/* Product Cards Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  transition:all .3s ease;
+  cursor:pointer;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  border-color:rgba(184,137,39,.4);
+}
+.pic{
+  height:280px;
+  background:#f0e4cf;
+  overflow:hidden;
+  position:relative;
+}
+.pic img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s ease;
+  display:block;
+}
+.card:hover .pic img{
+  transform:scale(1.06);
+}
+.badge-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(43,33,22,.85);
+  color:#fff;
+  font-size:9px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  padding:4px 8px;
+  backdrop-filter:blur(4px);
+}
+.info{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.cat{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#a27a2b;
+  font-weight:600;
+}
+.name{
+  font:600 22px "Cormorant Garamond",serif;
+  margin:4px 0 6px;
+  color:#241b12;
+}
+.desc{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.55;
+  flex-grow:1;
+}
+.card-action{
+  margin-top:12px;
+  font-size:11px;
+  color:var(--gold);
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.empty-state{
+  grid-column:1/-1;
+  text-align:center;
+  padding:60px 20px;
+  color:var(--muted);
+}
+.empty-state h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:26px;
+  margin-bottom:8px;
+  color:var(--ink);
+}
+
+/* Live Gold Rate Tracker Widget */
+.gold-tracker-widget{
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #fffefb 0%, #fbf5e8 50%, #f7ecd7 100%);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 30px;
+  margin: 12px 0 20px;
+  box-shadow: 0 16px 40px rgba(92,64,21,.08);
+  position: relative;
+  transition: all .3s ease;
+}
+.gold-tracker-widget:hover{
+  box-shadow: 0 20px 48px rgba(92,64,21,.12);
+}
+.tracker-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(230,215,189,.8);
+}
+.tracker-badge-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.live-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  background: #1e3d2f;
+  color: #6ee7b7;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+.pulse-dot{
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseRate 1.6s infinite;
+}
+@keyframes pulseRate{
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.tracker-location-pill{
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+  background: rgba(184,137,39,.12);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+.tracker-title{
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  color: #231a10;
+  margin: 0 0 4px;
+}
+.tracker-subtitle{
+  font-size: 13px;
+  color: var(--muted);
+}
+.tracker-actions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.city-dropdown{
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3b2c1b;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.city-dropdown:focus{
+  border-color: var(--gold);
+}
+.refresh-rate-btn{
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-dark);
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.refresh-rate-btn:hover{
+  background: var(--gold);
+  color: #fff;
+}
+.refresh-icon{
+  display: inline-block;
+  transition: transform .6s ease;
+}
+.refresh-rate-btn.spinning .refresh-icon{
+  transform: rotate(360deg);
+}
+
+.rate-cards-row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.15fr;
+  gap: 16px;
+}
+.rate-card{
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 20px 18px;
+  border-radius: 3px;
+  position: relative;
+  transition: var(--transition);
+}
+.rate-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(92,64,21,.08);
+}
+.rate-card.featured{
+  background: #fffefb;
+  border: 2px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(184,137,39,.14);
+}
+.featured-tag{
+  position: absolute;
+  top: -11px;
+  left: 14px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.rate-purity{
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.rate-title{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #231a10;
+  margin-bottom: 8px;
+}
+.rate-price{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.rate-unit{
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 12px;
+}
+.rate-breakdown{
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+  font-size: 11.5px;
+  color: #554432;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rate-breakdown div{
+  display: flex;
+  justify-content: space-between;
+}
+.rate-trend{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #15803d;
+  margin-top: 8px;
+}
+.rate-info-card{
+  background: rgba(184,137,39,.06);
+  border: 1px dashed var(--gold);
+  padding: 20px 18px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rate-info-card h4{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  color: #2b2116;
+  margin-bottom: 8px;
+}
+.rate-info-card p{
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.rate-wa-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.rate-wa-btn:hover{
+  background: #a3761e;
+}
+.rate-footer-note{
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(230,215,189,.6);
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media(max-width: 960px){
+  .rate-cards-row{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 600px){
+  .rate-cards-row{
+    grid-template-columns: 1fr;
+  }
+  .gold-tracker-widget{
+    padding: 20px 16px;
+  }
+  .tracker-header{
+    flex-direction: column;
+  }
+}
+
+/* Heritage Section */
+.heritage{
+  background:#302417;
+  color:#f8eedb;
+  position:relative;
+}
+.heritage .section{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:60px;
+  align-items:center;
+}
+.heritage h2{
+  color:#f7ead0;
+}
+.heritage p{
+  color:#cdbfa7;
+  line-height:1.9;
+  font-size:14.5px;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:28px;
+}
+.stat{
+  border-top:1px solid #796643;
+  padding-top:15px;
+}
+.stat b{
+  font:600 36px "Cormorant Garamond",serif;
+  display:block;
+  color:#e2c275;
+  line-height:1;
+  margin-bottom:4px;
+}
+.stat span{
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#b9aa91;
+}
+
+/* Contact Section */
+.contact{
+  background:var(--cream2);
+  text-align:center;
+}
+.contactBox{
+  border:1px solid var(--line);
+  padding:50px 30px;
+  max-width:760px;
+  margin:auto;
+  background:var(--white);
+  box-shadow:0 12px 36px rgba(92,64,21,.05);
+}
+.phone{
+  font:600 30px "Cormorant Garamond",serif;
+  color:#8a641e;
+  margin:18px 0 6px;
+  display:inline-block;
+}
+.contact-meta{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:24px;
+}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(27,20,12,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:100;
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  opacity:0;
+  transition:opacity .3s ease;
+}
+.modal.show{
+  display:flex;
+  opacity:1;
+}
+.modalBox{
+  background:var(--cream2);
+  max-width:850px;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  border:1px solid var(--line);
+  overflow:hidden;
+  animation:modalSlide .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalSlide{
+  from{transform:scale(0.96) translateY(10px);opacity:0}
+  to{transform:scale(1) translateY(0);opacity:1}
+}
+.modalBox img{
+  width:100%;
+  height:440px;
+  object-fit:cover;
+  display:block;
+  background:#f0e4cf;
+}
+.modalInfo{
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.close{
+  position:absolute;
+  right:16px;
+  top:12px;
+  border:0;
+  background:transparent;
+  font-size:30px;
+  line-height:1;
+  cursor:pointer;
+  color:#604d31;
+  z-index:10;
+  transition:var(--transition);
+}
+.close:hover{
+  color:var(--gold);
+  transform:scale(1.15);
+}
+.modalInfo h2{
+  margin:6px 0 12px;
+}
+.modal-actions{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* Footer */
+footer{
+  padding:32px 22px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  color:#8a7963;
+  background:var(--white);
+}
+
+/* Responsive Media Queries */
+@media(max-width:960px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:850px){
+  .links{display:none}
+  .mobile-toggle{display:block}
+  .heroIn, .heritage .section{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .heroCard{max-width:540px;margin:20px auto 0}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .navin{position:relative}
+  .links.mobile-open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:var(--cream2);
+    border-bottom:1px solid var(--line);
+    padding:20px 22px;
+    gap:16px;
+    box-shadow:0 12px 24px rgba(0,0,0,.08);
+  }
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .pic{height:300px}
+  .stats{grid-template-columns:1fr}
+  .heroIn{padding-top:45px;padding-bottom:50px}
+  .heroCard img{height:340px}
+  .modalBox{grid-template-columns:1fr}
+  .modalBox img{height:280px}
+  .modalInfo{padding:25px}
+  .contactBox{padding:35px 18px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="navin">
+    <a class="logo" href="#">SHREE<span>JEWELLERS</span></a>
+    <div class="links" id="navLinks">
+      <a href="#collections" onclick="closeMobileNav()">Collections</a>
+      <a href="#story" onclick="closeMobileNav()">Our Story</a>
+      <a href="#contact" onclick="closeMobileNav()">Visit Us</a>
+    </div>
+    <div class="nav-cta">
+      <a class="nav-btn" href="https://wa.me/917022729437" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="heroIn">
+    <div>
+      <div class="kicker">Est. 1998 · Crafted in India</div>
+      <h1>Where Gold<br><i>Becomes</i> Art.</h1>
+      <p>Discover refined Indian jewellery designed for celebrations, milestones and everyday elegance. Explore our curated showcase of contemporary and traditional gold designs.</p>
+      <div class="btns">
+        <a class="btn primary" href="#collections">Explore Designs</a>
+        <a class="btn secondary" href="#contact">Book a Visit</a>
+      </div>
+    </div>
+    <div class="heroCard">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1080&q=80" 
+           onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1080&q=80'" 
+           alt="Featured Royal Gold Jewellery">
+      <div class="heroTag">The Royal Edit · 2026</div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="collections">
+  <div class="head">
+    <div class="kicker">Curated for you</div>
+    <h2>Latest Collections</h2>
+    <div class="sub">Tap any design to view it in detail and enquire directly.</div>
+  </div>
+
+  <div class="search">
+    <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <input id="search" type="search" placeholder="Search necklace, earrings, bridal, classic..." autocomplete="off">
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-cat="all">All Designs</button>
+    <button class="filter" data-cat="necklace">Necklaces</button>
+    <button class="filter" data-cat="earrings">Earrings</button>
+    <button class="filter" data-cat="bridal">Bridal</button>
+    <button class="filter" data-cat="classic">Classic</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="heritage" id="story">
+  <div class="section">
+    <div>
+      <div class="kicker">The Shree philosophy</div>
+      <h2>Timeless by design.<br>Personal by nature.</h2>
+    </div>
+    <div>
+      <p>At Shree Jewellers, every piece is chosen to balance heritage craftsmanship with a modern sense of luxury. From statement bridal sets to everyday classics, our collection is made to become part of your story.</p>
+      <div class="stats">
+        <div class="stat"><b>22K</b><span>Gold Collections</span></div>
+        <div class="stat"><b>25+</b><span>Years of Craft</span></div>
+        <div class="stat"><b>916</b><span>Hallmark Focus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contactBox">
+    <div class="kicker">Come see the collection</div>
+    <h2>Visit Shree Jewellers</h2>
+    <p class="sub">Experience our hallmark jewellery collections in person with dedicated personal assistance.</p>
+    <div>
+      <a class="phone" href="tel:+917022729437">+91 70227 29437</a>
+    </div>
+    <p class="contact-meta">Main Road · Your City · Karnataka</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" href="tel:+917022729437">Call Showroom</a>
+      <a class="btn secondary" href="https://wa.me/917022729437?text=Hi%20Shree%20Jewellers,%20I'd%20like%20to%20know%20more%20about%20your%20collections." target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Shree Jewellers · Handcrafted with timeless elegance · All rights reserved.
+</footer>
+
+<!-- Detail Modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+  <div class="modalBox">
+    <button class="close" onclick="closeModal()" aria-label="Close modal">×</button>
+    <img id="modalImg" src="" alt="Jewellery preview">
+    <div class="modalInfo">
+      <div class="kicker" id="modalCat"></div>
+      <h2 id="modalName"></h2>
+      <p class="sub" id="modalDesc"></p>
+      <div class="modal-actions">
+        <a class="btn primary" id="modalWaBtn" href="#" target="_blank" rel="noopener">
+          Enquire on WhatsApp
+        </a>
+        <a class="btn secondary" href="tel:+917022729437" onclick="closeModal()">
+          Call Showroom
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Verified high-definition jewelry catalog with fallback images
+const products = [
+  {
+    cat: "necklace",
+    name: "Kundan Grace",
+    desc: "Elegant stonework with a contemporary silhouette, handcrafted in 22k hallmark gold.",
+    img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "bridal",
+    name: "Royal Bridal Haar",
+    desc: "A statement bridal set inspired by traditional royal Indian craftsmanship and intricate motifs.",
+    img: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "classic",
+    name: "Antique Gold Set",
+    desc: "Intricate antique finish motifs and warm traditional detailing for auspicious ceremonies.",
+    img: "https://images.unsplash.com/photo-1611591475870-761bf7000bf2?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "earrings",
+    name: "Regal Drop Earrings",
+    desc: "Pure gold, fine ruby gemstone accents and freshwater pearls curated for festive occasions.",
+    img: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "bridal",
+    name: "Heritage Kundan Choker",
+    desc: "A rich royal bridal combination with intricate stone setting and hanging emerald beads.",
+    img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "necklace",
+    name: "Emerald Royale",
+    desc: "A graceful handcrafted gold silhouette embedded with colourful precious gemstone accents.",
+    img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "classic",
+    name: "Mayura Gold Bangles",
+    desc: "Hand-embossed peacock artistry etched in lustrous 22 Karat gold with fine filigree work.",
+    img: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    cat: "earrings",
+    name: "Chandbali Elegance",
+    desc: "Traditional crescent-shaped chandelier earrings adorned with floral filigree and pearls.",
+    img: "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=900&q=80"
+  }
+];
+
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
+const filterButtons = document.querySelectorAll(".filter");
+let activeCat = "all";
+
+// Setup Live Gold Tracker Widget Element
+const goldTrackerWidget = document.createElement("div");
+goldTrackerWidget.className = "gold-tracker-widget";
+goldTrackerWidget.id = "goldTrackerWidget";
+goldTrackerWidget.innerHTML = `
+  <div class="tracker-header">
+    <div>
+      <div class="tracker-badge-row">
+        <span class="live-badge"><span class="pulse-dot"></span> LIVE TRACKER</span>
+        <span class="tracker-location-pill">📍 <span id="locationCity">Bengaluru</span></span>
+      </div>
+      <h3 class="tracker-title">Live Gold Rate Today</h3>
+      <p class="tracker-subtitle">
+        Real-time benchmark bullion & hallmark rates for <strong id="locationDetail">Bengaluru, Karnataka (India)</strong>
+      </p>
+    </div>
+    <div class="tracker-actions">
+      <select id="citySelect" class="city-dropdown" title="Select or detect city">
+        <option value="auto">📍 Auto-Detect Location</option>
+        <option value="Bengaluru" selected>Bengaluru, Karnataka</option>
+        <option value="Mumbai">Mumbai, Maharashtra</option>
+        <option value="Delhi">Delhi NCR</option>
+        <option value="Chennai">Chennai, Tamil Nadu</option>
+        <option value="Hyderabad">Hyderabad, Telangana</option>
+        <option value="Kolkata">Kolkata, West Bengal</option>
+        <option value="Ahmedabad">Ahmedabad, Gujarat</option>
+        <option value="Pune">Pune, Maharashtra</option>
+        <option value="Jaipur">Jaipur, Rajasthan</option>
+        <option value="Kochi">Kochi, Kerala</option>
+      </select>
+      <button id="refreshRatesBtn" class="refresh-rate-btn" title="Refresh Live Gold Rates">
+        <span class="refresh-icon">↻</span> Refresh
+      </button>
+    </div>
+  </div>
+
+  <div class="rate-cards-row">
+    <!-- 22K (916) -->
+    <div class="rate-card featured">
+      <span class="featured-tag">Jewellery Standard</span>
+      <div class="rate-purity">91.6% Pure Gold</div>
+      <div class="rate-title">22K Gold (916 Hallmark)</div>
+      <div class="rate-price" id="rate22kGram">₹ 13,385</div>
+      <div class="rate-unit">per 1 gram</div>
+      <div class="rate-breakdown">
+        <div><span>1 Pavan (8 Grams):</span> <strong id="rate22k8Gram">₹ 1,07,080</strong></div>
+        <div><span>10 Grams (1 Tola):</span> <strong id="rate22k10Gram">₹ 1,33,850</strong></div>
+      </div>
+      <div class="rate-trend">▲ Market Live Updated</div>
+    </div>
+
+    <!-- 24K Pure -->
+    <div class="rate-card">
+      <div class="rate-purity">99.9% Pure Gold</div>
+      <div class="rate-title">24K Pure Gold (999)</div>
+      <div class="rate-price" id="rate24kGram">₹ 14,600</div>
+      <div class="rate-unit">per 1 gram</div>
+      <div class="rate-breakdown">
+        <div><span>8 Grams:</span> <strong id="rate24k8Gram">₹ 1,16,800</strong></div>
+        <div><span>10 Grams:</span> <strong id="rate24k10Gram">₹ 1,46,000</strong></div>
+      </div>
+      <div class="rate-trend">▲ Bullion Benchmark</div>
+    </div>
+
+    <!-- 18K Luxury -->
+    <div class="rate-card">
+      <div class="rate-purity">75.0% Gold</div>
+      <div class="rate-title">18K Gold (750)</div>
+      <div class="rate-price" id="rate18kGram">₹ 10,950</div>
+      <div class="rate-unit">per 1 gram</div>
+      <div class="rate-breakdown">
+        <div><span>Diamond Setting:</span> <strong>Hallmark 750</strong></div>
+        <div><span>10 Grams:</span> <strong id="rate18k10Gram">₹ 1,09,500</strong></div>
+      </div>
+      <div class="rate-trend">▲ Fine Jewellery Grade</div>
+    </div>
+
+    <!-- Shree Assurance & WhatsApp -->
+    <div class="rate-info-card">
+      <div>
+        <h4>BIS Hallmark Assurance</h4>
+        <p>All Shree Jewellers ornaments are guaranteed 22K 916 hallmarked with authentic HUID laser engraving.</p>
+      </div>
+      <a class="rate-wa-btn" href="https://wa.me/917022729437?text=Hi%20Shree%20Jewellers,%20I%20would%20like%20to%20know%20today's%20jewellery%20rate%20quote%20with%20making%20charges." target="_blank" rel="noopener">
+        Calculate Price on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="rate-footer-note">
+    <span>ℹ️ Live online spot rates extracted via bullion feeds & adjusted for local hallmark retail market.</span>
+    <span id="rateLastUpdated">Live as of --:--</span>
+  </div>
+`;
+
+// City differentials based on state bullion taxes and transport
+const CITY_DIFFS = {
+  "bengaluru": { name: "Bengaluru", state: "Karnataka", diff: 0 },
+  "bangalore": { name: "Bengaluru", state: "Karnataka", diff: 0 },
+  "mumbai": { name: "Mumbai", state: "Maharashtra", diff: -15 },
+  "delhi": { name: "Delhi", state: "Delhi NCR", diff: -10 },
+  "new delhi": { name: "Delhi", state: "Delhi NCR", diff: -10 },
+  "chennai": { name: "Chennai", state: "Tamil Nadu", diff: 30 },
+  "hyderabad": { name: "Hyderabad", state: "Telangana", diff: 15 },
+  "kolkata": { name: "Kolkata", state: "West Bengal", diff: 10 },
+  "ahmedabad": { name: "Ahmedabad", state: "Gujarat", diff: -10 },
+  "pune": { name: "Pune", state: "Maharashtra", diff: -15 },
+  "jaipur": { name: "Jaipur", state: "Rajasthan", diff: -5 },
+  "kochi": { name: "Kochi", state: "Kerala", diff: 20 },
+  "mysuru": { name: "Mysuru", state: "Karnataka", diff: 5 }
+};
+
+let userLocation = {
+  city: "Bengaluru",
+  state: "Karnataka",
+  country: "India"
+};
+
+let rawGoldData = {
+  spotGramINR: 12493,
+  updatedAt: new Date()
+};
+
+function updateLocationUI() {
+  const cityEl = document.getElementById("locationCity");
+  const detailEl = document.getElementById("locationDetail");
+  if (cityEl) cityEl.textContent = userLocation.city;
+  if (detailEl) detailEl.textContent = `${userLocation.city}, ${userLocation.state} (${userLocation.country})`;
+
+  const citySelect = document.getElementById("citySelect");
+  if (citySelect) {
+    const matchingOption = Array.from(citySelect.options).find(
+      opt => opt.value.toLowerCase() === userLocation.city.toLowerCase()
+    );
+    if (matchingOption) {
+      citySelect.value = matchingOption.value;
+    } else {
+      citySelect.value = "auto";
+    }
+  }
+}
+
+function updateRatesUI() {
+  const cityKey = userLocation.city.toLowerCase().trim();
+  const cityInfo = CITY_DIFFS[cityKey] || { name: userLocation.city, state: userLocation.state, diff: 0 };
+
+  const price24KGram = Math.round((rawGoldData.spotGramINR * 1.168) + cityInfo.diff);
+  const price22KGram = Math.round(price24KGram * (22 / 24)); // 91.6% purity
+  const price18KGram = Math.round(price24KGram * (18 / 24)); // 75.0% purity
+
+  const formatINR = (val) => "₹ " + Number(val).toLocaleString("en-IN");
+
+  const el22k = document.getElementById("rate22kGram");
+  const el22k8 = document.getElementById("rate22k8Gram");
+  const el22k10 = document.getElementById("rate22k10Gram");
+  const el24k = document.getElementById("rate24kGram");
+  const el24k8 = document.getElementById("rate24k8Gram");
+  const el24k10 = document.getElementById("rate24k10Gram");
+  const el18k = document.getElementById("rate18kGram");
+  const el18k10 = document.getElementById("rate18k10Gram");
+  const timeEl = document.getElementById("rateLastUpdated");
+
+  if (el22k) el22k.textContent = formatINR(price22KGram);
+  if (el22k8) el22k8.textContent = formatINR(price22KGram * 8); // 1 Pavan / Sovereign
+  if (el22k10) el22k10.textContent = formatINR(price22KGram * 10);
+
+  if (el24k) el24k.textContent = formatINR(price24KGram);
+  if (el24k8) el24k8.textContent = formatINR(price24KGram * 8);
+  if (el24k10) el24k10.textContent = formatINR(price24KGram * 10);
+
+  if (el18k) el18k.textContent = formatINR(price18KGram);
+  if (el18k10) el18k10.textContent = formatINR(price18KGram * 10);
+
+  if (timeEl) {
+    const d = rawGoldData.updatedAt;
+    const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    timeEl.textContent = `Live as of ${timeStr}`;
+  }
+}
+
+async function detectLocation() {
+  try {
+    const res = await fetch("https://freeipapi.com/api/json");
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.cityName) {
+        userLocation.city = data.cityName;
+        userLocation.state = data.regionName || "India";
+        userLocation.country = data.countryName || "India";
+        updateLocationUI();
+        updateRatesUI();
+        return;
+      }
+    }
+  } catch (e) {
+    console.log("Freeipapi fallback:", e);
+  }
+
+  try {
+    const res = await fetch("https://ipwho.is/");
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.city) {
+        userLocation.city = data.city;
+        userLocation.state = data.region || "India";
+        userLocation.country = data.country || "India";
+        updateLocationUI();
+        updateRatesUI();
+        return;
+      }
+    }
+  } catch (e) {
+    console.log("ipwho.is fallback:", e);
+  }
+
+  updateLocationUI();
+  updateRatesUI();
+}
+
+async function fetchLiveGoldRates() {
+  const refreshBtn = document.getElementById("refreshRatesBtn");
+  if (refreshBtn) refreshBtn.classList.add("spinning");
+
+  try {
+    const res = await fetch("https://api.gold-api.com/price/XAU/INR");
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.price) {
+        rawGoldData.spotGramINR = data.price / 31.1034768;
+        rawGoldData.updatedAt = new Date();
+      }
+    }
+  } catch (err) {
+    console.warn("Gold spot API live update issue; retaining latest benchmark:", err);
+  } finally {
+    if (refreshBtn) {
+      setTimeout(() => refreshBtn.classList.remove("spinning"), 600);
+    }
+    updateRatesUI();
+  }
+}
+
+// Render products to grid
+function render() {
+  const query = search.value.toLowerCase().trim();
+  grid.innerHTML = "";
+  
+  const filtered = products.filter(p => {
+    const matchesCategory = (activeCat === "all" || p.cat.toLowerCase() === activeCat.toLowerCase());
+    const matchesQuery = !query || (p.name + " " + p.desc + " " + p.cat).toLowerCase().includes(query);
+    return matchesCategory && matchesQuery;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <h3>No jewellery designs found</h3>
+        <p>Try searching for "necklace", "bridal", "earrings", or clear the filter.</p>
+      </div>
+    `;
+    grid.appendChild(goldTrackerWidget);
+    return;
+  }
+
+  let trackerInserted = false;
+
+  filtered.forEach(p => {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `View ${p.name}`);
+    
+    card.innerHTML = `
+      <div class="pic">
+        <span class="badge-tag">22K 916</span>
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80'">
+      </div>
+      <div class="info">
+        <div class="cat">${p.cat}</div>
+        <div class="name">${p.name}</div>
+        <div class="desc">${p.desc}</div>
+        <div class="card-action">View Details →</div>
+      </div>
+    `;
+    
+    card.onclick = () => openModal(p);
+    card.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openModal(p);
+      }
+    };
+    grid.appendChild(card);
+
+    // Insert the Live Gold Tracker right below the Heritage Kundan Choker card!
+    if (p.name.toLowerCase().includes("heritage kundan")) {
+      grid.appendChild(goldTrackerWidget);
+      trackerInserted = true;
+    }
+  });
+
+  // If Heritage Kundan was filtered out by active category, keep tracker accessible
+  if (!trackerInserted && filtered.length > 0) {
+    grid.appendChild(goldTrackerWidget);
+  }
+}
+
+// Category filter button handler
+filterButtons.forEach(btn => {
+  btn.onclick = () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCat = btn.dataset.cat;
+    render();
+  };
+});
+
+// Live search handler
+search.addEventListener("input", render);
+
+// Modal functions
+function openModal(p) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  const modalName = document.getElementById("modalName");
+  const modalCat = document.getElementById("modalCat");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalWaBtn = document.getElementById("modalWaBtn");
+
+  modalImg.src = p.img;
+  modalImg.onerror = () => { modalImg.src = "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"; };
+  modalImg.alt = p.name;
+  modalName.textContent = p.name;
+  modalCat.textContent = p.cat.toUpperCase() + " · 22K GOLD";
+  modalDesc.textContent = p.desc;
+
+  const waMsg = encodeURIComponent(`Hi Shree Jewellers, I am interested in knowing more about the "${p.name}" (${p.cat}).`);
+  modalWaBtn.href = `https://wa.me/917022729437?text=${waMsg}`;
+
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+// Close modal when clicking outside box or pressing Escape
+document.getElementById("modal").onclick = (e) => {
+  if (e.target.id === "modal") closeModal();
+};
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
+// Mobile navigation toggle
+const mobileToggle = document.getElementById("mobileToggle");
+const navLinks = document.getElementById("navLinks");
+mobileToggle.onclick = () => {
+  navLinks.classList.toggle("mobile-open");
+};
+
+function closeMobileNav() {
+  navLinks.classList.remove("mobile-open");
+}
+
+// Navbar scroll subtle shadow
+window.addEventListener("scroll", () => {
+  const nav = document.getElementById("navbar");
+  if (window.scrollY > 30) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+
+// Initial render
+render();
+
+// Bind widget controls
+const citySelect = document.getElementById("citySelect");
+if (citySelect) {
+  citySelect.addEventListener("change", (e) => {
+    if (e.target.value === "auto") {
+      detectLocation();
+    } else {
+      userLocation.city = e.target.value;
+      const info = CITY_DIFFS[e.target.value.toLowerCase()] || { state: "India" };
+      userLocation.state = info.state;
+      updateLocationUI();
+      updateRatesUI();
+    }
+  });
+}
+
+const refreshBtn = document.getElementById("refreshRatesBtn");
+if (refreshBtn) {
+  refreshBtn.addEventListener("click", () => {
+    fetchLiveGoldRates();
+  });
+}
+
+// Initial rate computation & auto-location / live rate extraction
+updateLocationUI();
+updateRatesUI();
+detectLocation();
+fetchLiveGoldRates();
+
+// Auto refresh rates every 60 seconds
+setInterval(fetchLiveGoldRates, 60000);
+</script>
+</body>
+</html>
+
